@@ -23,9 +23,9 @@ SOLUTION:
 -----------
 In this project, I have separately trained an on-policy (SARSA) and an off-policy (Q-Learning) Temporal Difference learner, using a teacher that knows a (nearly) optimal tic-tac-toe gameplay policy.
 
-Both for on-policy and off-policy learners, I have plotted the moving averages of rewards per training episode and uploaded them as .png files under the names: 'SARSA_rewards_against_teacher.png' and 'QLearning_rewards_against_teacher.png', respectively.
+Both for on-policy and off-policy learners, I have plotted the moving averages of rewards per training episode and uploaded them as .png files under the names: 'SARSA_rewards_against_teacher.png' and 'QLearning_rewards_against_teacher.png', respectively. The increase in agent performance is evident, the reason for this is two-fold. First, the agent is indeed updating its q-value table per state and action and learning how to play better. Second, I anneal the agents' epsilon gradually so the agent transforms from being a fully explorative to fully exploitative in the end.
 
-Both images are reproducible, making use of the uploaded pthon files. 
+Observing both plots, the moving average rewards do not reach high values, however this is mainly due to the fact that the agents play against a (nearly) optmial 'teacher' who does random stuff half of the time (teacher object itself also has an epsilon parameter and I set it to 0.5 for both training sessions). Both images are reproducible, making use of the uploaded python files. 
 
 -----------
 REPO CONTENTS:
