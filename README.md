@@ -1,27 +1,7 @@
-# tic_tac_toe
------------
-TASK DESCRIPTION:
------------
-Your task is to create an agent that learns to play a game of tic-tac-toe. It's up to you to decide the training method:
-
-- implementing a teacher that knows the optimal strategy
-
-- bootstrapping two random agents against themselves
-
-- train the agent yourself and store its state for us to load
-or any other approach. However the trained agent should learn the value or action-value function or policy for each state purely from game play, rather than from knowing the rules and heuristics of the game. Code should be written in C++. If you prefer to use a different language, please check with us first.
-
-Use Q-learning and Sarsa to solve the problem. Plot a reward per episode graph for both algorithms.
+In this project, I have separately trained an on-policy (SARSA) and an off-policy (Q-Learning) Temporal Difference learner, using a teacher that knows a (nearly) optimal tic-tac-toe gameplay policy.
 
 SARSA http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node64.html
 Q-learning http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node65.html
-
-We will assign high weight to good code documentation and style. Please include unit tests in your project. Only spare time should be spent on presentation of game play, text output to terminal is sufficient. Also we expect the agent to be pretty good at the game.
-
------------
-SOLUTION:
------------
-In this project, I have separately trained an on-policy (SARSA) and an off-policy (Q-Learning) Temporal Difference learner, using a teacher that knows a (nearly) optimal tic-tac-toe gameplay policy.
 
 Both for on-policy and off-policy learners, I have plotted the moving averages of rewards per training episode and uploaded them as .png files under the names: 'SARSA_rewards_against_teacher.png' and 'QLearning_rewards_against_teacher.png', respectively. The increase in agent performance is evident, the reason for this is two-fold. First, the agent is indeed updating its q-value table per state and action and learning how to play better. Second, I anneal the agents' epsilon gradually so the agent transforms from being a fully explorative to fully exploitative in the end.
 
@@ -31,8 +11,6 @@ Observing both plots, the moving average rewards do not reach high values, howev
 REPO CONTENTS:
 -----------
 The repository contains the following files:
-
-- README.md: this very file.
 
 - SARSA_rewards_against_teacher.png: The 1000-game moving averages of the on-policy (SARSA) agent's rewards. I plot the rewards for games where the agent starts (blue) and games where the teacher starts (green) separately. 
 
