@@ -41,4 +41,4 @@ NOTES:
 ----------
 FEEDBACK:
 ----------
-The code is reasonably well designed but there are some improvements that could have been made. For example ,there are PEP8 style violations -- particularly with respect to whitespace and naming inconsistencies. There are some unnecessary duplicates of logic, sometimes whole functions (e.g. print_instructions, render, __isWinner) as well as agent handling within the eval/train loops. Additionally, the unit tests could exercise the code better. 
+The code is reasonably well designed but there are some improvements that can be made. For example ,there are PEP8 style violations -- particularly with respect to whitespace and naming inconsistencies. There are some unnecessary duplicates of logic, sometimes whole functions (e.g. print_instructions, render, __isWinner) as well as agent handling within the eval/train loops. Additionally, the unit tests can exercise the code better. 
