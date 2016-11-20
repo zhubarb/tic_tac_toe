@@ -38,4 +38,7 @@ NOTES:
 - In both experimental results I have attached, the td-learner is trained with a decaying epsilon as well. I start training with an epsilon vlaue of 1 (fully random) and anneal it slowly to 0.05 as the training progresses.
 - I first attempted minimax (https://en.wikipedia.org/wiki/Minimax) as the core logic for the teacher. However, even with the alpha-beta pruning, the episode run times were too long. Due to lack of time I had to abandon this approach and manually code a teacher with a (nearly optimal) game strategy.
 
-
+----------
+FEEDBACK:
+----------
+The code is reasonably well designed but there are some improvements that could have been made. For example ,there are PEP8 style violations -- particularly with respect to whitespace and naming inconsistencies. There are some unnecessary duplicates of logic, sometimes whole functions (e.g. print_instructions, render, __isWinner) as well as agent handling within the eval/train loops. Additionally, the unit tests could exercise the code better. 
